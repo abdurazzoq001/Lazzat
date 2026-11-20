@@ -1,0 +1,27 @@
+.bizhaqimizda {
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  margin-bottom: 30px;
+  &__left {
+    width: 500px;
+  }
+
+  &__right {
+    font-size: 45px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  &__h1 {
+    font-size: 50px;
+    margin: auto;
+    width: 360px;
+    font-weight: 900;
+    font-family: "Aleo";
+    font-style: italic;
+    color: white;
+    margin-bottom: 30px;
+  }
+}
