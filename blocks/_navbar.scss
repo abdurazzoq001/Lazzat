@@ -10,22 +10,6 @@
     width: 100px;
   }
 
-  &__ul {
-    display: flex;
-    gap: 30px;
-    font-family: "Aleo";
-    font-style: italic;
-    font-weight: 900;
-  }
-
-  &__li {
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    &:hover {
-      color: rgb(185, 173, 173);
-    }
-  }
-
   &__p {
     color: rgb(255, 255, 255);
     font-size: 20px;
@@ -45,5 +29,35 @@
     font-family: "Aleo";
     font-style: italic;
     font-weight: 900;
+  }
+
+  &__burger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    width: 95%;
+    justify-content: space-between;
+    gap: 0;
+
+    &__p {
+      display: none;
+    }
+
+    &__pes {
+      display: none;
+    }
+
+    &__burger {
+      display: block;
+    }
+
+    &__hr{
+      border: 1px solid white;
+      width: 30px;
+      margin-top: 5px;
+    }
   }
 }

@@ -25,20 +25,13 @@ a{
 }
 
 
-.rightimg{
-    position: absolute;
-    right: 110px;
-    width: 100px;
-    height: 2095px;
-}
-.leftimg{
-    position: absolute;
-    left: 110px;
-    width: 100px;
-    height: 2095px;
-
-}
-
 body{
     position: relative;
+}
+
+
+@media only screen and (max-width: 480px){
+  .wrapper{
+    width: 100%;
+  }
 }

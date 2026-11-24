@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   &__cards {
     width: 1000px;
     display: flex;
@@ -23,8 +24,8 @@
   }
 
   &__card {
-    width: 180px;
-    height: 220px;
+    width: 200px;
+    height: 240px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -35,6 +36,64 @@
   }
 
   &__img {
-    width: 150px;
+    width: 180px;
+  }
+
+  &__img1{
+    width: 120px;
+  }
+
+  &__positionimg{
+    position: absolute;
+    width: 170px;
+    top: 100px;
+    left: 250px;
+  }
+
+  &__positionimg2{
+    position: absolute;
+    width: 130px;
+    top: 200px;
+    right: 300px;
+  }
+
+  &__positionimg3{
+    position: absolute;
+    width: 130px;
+    top: 500px;
+    left: 300px;
+  }
+}
+
+
+
+@media only screen and (max-width: 480px){
+  .menu{
+    width: 95%;
+    &__positionimg{
+      display: none;
+    }
+
+    &__positionimg3{
+      display: none;
+    }
+
+    &__positionimg2{
+      display: none;
+    }
+
+    &__cards{
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      gap: 30px;
+      margin-top: 0;
+    }
+
+    &__card{
+      width: 100%;
+    }
   }
 }

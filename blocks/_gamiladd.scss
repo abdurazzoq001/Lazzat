@@ -1,0 +1,67 @@
+.gmailadd {
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 30px;
+  color: white;
+
+  &__h1 {
+    font-size: 50px;
+  }
+
+  &__h3 {
+    font-size: 40px;
+    font-family: "Aleo";
+    font-style: italic;
+    font-weight: 900;
+  }
+
+  &__a {
+    font-size: 30px;
+    font-family: "Aleo";
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    &:hover {
+      color: rgb(204, 161, 161);
+      transition: 0.7s;
+      font-size: 32px;
+    }
+
+    &:active {
+      color: rgb(102, 81, 81);
+    }
+  }
+
+  &__left {
+    height: 320px;
+  }
+
+  &__random{
+    height: 120px;
+    margin-top: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 480px){
+  .gmailadd{
+    width: 100%;
+    flex-direction: column-reverse;
+    text-align: center;
+    &__left{
+      height: 100%;
+    }
+
+    &__random{
+      margin-bottom: 40px;
+    }
+
+    &__a{
+      width: 100%;
+      text-align: center;
+      margin: auto;
+    }
+  }
+}

@@ -16,20 +16,6 @@
 .navbar__logo {
   width: 100px;
 }
-.navbar__ul {
-  display: flex;
-  gap: 30px;
-  font-family: "Aleo";
-  font-style: italic;
-  font-weight: 900;
-}
-.navbar__li {
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-}
-.navbar__li:hover {
-  color: rgb(185, 173, 173);
-}
 .navbar__p {
   color: rgb(255, 255, 255);
   font-size: 20px;
@@ -48,7 +34,31 @@
   font-style: italic;
   font-weight: 900;
 }
+.navbar__burger {
+  display: none;
+}
 
+@media only screen and (max-width: 480px) {
+  .navbar {
+    width: 95%;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .navbar__p {
+    display: none;
+  }
+  .navbar__pes {
+    display: none;
+  }
+  .navbar__burger {
+    display: block;
+  }
+  .navbar__hr {
+    border: 1px solid white;
+    width: 30px;
+    margin-top: 5px;
+  }
+}
 .intro {
   width: 1100px;
   margin: auto;
@@ -65,12 +75,27 @@
   color: white;
 }
 
+@media only screen and (max-width: 480px) {
+  .intro {
+    width: 95%;
+    flex-direction: column-reverse;
+  }
+  .intro__img {
+    width: 100%;
+  }
+  .intro__h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+  }
+}
 .menu {
   width: 1100px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .menu__cards {
   width: 1000px;
@@ -89,8 +114,8 @@
   margin-bottom: 30px;
 }
 .menu__card {
-  width: 180px;
-  height: 220px;
+  width: 200px;
+  height: 240px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -100,9 +125,56 @@
   box-shadow: 0px 0px 500px 1px;
 }
 .menu__img {
-  width: 150px;
+  width: 180px;
+}
+.menu__img1 {
+  width: 120px;
+}
+.menu__positionimg {
+  position: absolute;
+  width: 170px;
+  top: 100px;
+  left: 250px;
+}
+.menu__positionimg2 {
+  position: absolute;
+  width: 130px;
+  top: 200px;
+  right: 300px;
+}
+.menu__positionimg3 {
+  position: absolute;
+  width: 130px;
+  top: 500px;
+  left: 300px;
 }
 
+@media only screen and (max-width: 480px) {
+  .menu {
+    width: 95%;
+  }
+  .menu__positionimg {
+    display: none;
+  }
+  .menu__positionimg3 {
+    display: none;
+  }
+  .menu__positionimg2 {
+    display: none;
+  }
+  .menu__cards {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 30px;
+    margin-top: 0;
+  }
+  .menu__card {
+    width: 100%;
+  }
+}
 .bizhaqimizda {
   width: 1100px;
   margin: auto;
@@ -129,6 +201,21 @@
   margin-bottom: 30px;
 }
 
+@media only screen and (max-width: 480px) {
+  .bizhaqimizda {
+    width: 95%;
+    flex-direction: column;
+  }
+  .bizhaqimizda__img {
+    width: 100%;
+  }
+  .bizhaqimizda__left {
+    width: 100%;
+  }
+  .bizhaqimizda__right {
+    width: 100%;
+  }
+}
 .footer {
   width: 1100px;
   margin: auto;
@@ -136,13 +223,83 @@
   gap: 30px;
   justify-content: center;
   align-items: center;
-  background-image: url("../imges/image.png");
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
 }
 .footer__ul {
   display: flex;
   gap: 30px;
+  color: white;
+  align-items: center;
+}
+.footer__li {
+  color: white;
 }
 
+@media only screen and (max-width: 480px) {
+  .footer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+.gmailadd {
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 30px;
+  color: white;
+}
+.gmailadd__h1 {
+  font-size: 50px;
+}
+.gmailadd__h3 {
+  font-size: 40px;
+  font-family: "Aleo";
+  font-style: italic;
+  font-weight: 900;
+}
+.gmailadd__a {
+  font-size: 30px;
+  font-family: "Aleo";
+  font-style: italic;
+  color: rgb(255, 255, 255);
+}
+.gmailadd__a:hover {
+  color: rgb(204, 161, 161);
+  transition: 0.7s;
+  font-size: 32px;
+}
+.gmailadd__a:active {
+  color: rgb(102, 81, 81);
+}
+.gmailadd__left {
+  height: 320px;
+}
+.gmailadd__random {
+  height: 120px;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+  .gmailadd {
+    width: 100%;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .gmailadd__left {
+    height: 100%;
+  }
+  .gmailadd__random {
+    margin-bottom: 40px;
+  }
+  .gmailadd__a {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+}
 .wrapper {
   width: 1100px;
   margin: auto;
@@ -159,20 +316,12 @@ a {
   color: black;
 }
 
-.rightimg {
-  position: absolute;
-  right: 110px;
-  width: 100px;
-  height: 2095px;
-}
-
-.leftimg {
-  position: absolute;
-  left: 110px;
-  width: 100px;
-  height: 2095px;
-}
-
 body {
   position: relative;
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
